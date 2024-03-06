@@ -1,23 +1,43 @@
+import {Button} from "@/components/ui/button";
+import Link from "next/link";
+import {EnvelopeClosedIcon, GitHubLogoIcon, LinkedInLogoIcon, TwitterLogoIcon} from "@radix-ui/react-icons";
+import {cn} from "@/lib/utils";
+
 interface Props {
-    icon: string;
-    onClick: () => void;
+    icon: 'github' | 'linkedin' | 'twitter' | 'email';
+    link: string;
     className?: string;
     disabled?: boolean;
 
 }
 
 
+const Icons = {
+    github: GitHubLogoIcon,
+    linkedin: LinkedInLogoIcon,
+    twitter: TwitterLogoIcon,
+    email: EnvelopeClosedIcon,
+
+}
+
+
 const IconButton = ({
-                        icon, onClick, className, disabled
+                        icon,
+                        link,
+                        className,
+                        disabled
                     }: Props) => {
+
+    const Icon = Icons[icon];
     return (
-        <button
-            className={`icon-button ${className}`}
-            // onClick={onClick}
-            disabled={disabled}
-        >
-            <i className={`material-icons`}>{icon}</i>
-        </button>
+        <Button variant={'ghost'} className={cn("p-6", className)} disabled={disabled} asChild>
+            <Link href={link} target="_blank" rel="noreferrer">
+                <Icon
+                    height={32}
+                    width={32}
+                />
+            </Link>
+        </Button>
     );
 }
 

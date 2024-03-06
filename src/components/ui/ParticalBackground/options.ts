@@ -22,11 +22,7 @@ const options: ISourceOptions = {
         },
     },
     particles: {
-        color: {
-            value: "#ffffff",
-        },
         links: {
-            color: "#ffffff",
             distance: DISTANCE,
             enable: true,
             opacity: 0.6,
