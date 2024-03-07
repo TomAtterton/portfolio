@@ -16,10 +16,14 @@ const config = {
             screens: {
                 "2xl": "1400px",
             },
+
         },
         extend: {
             fontFamily: {
                 mono: ['var(--font-roboto-mono)'],
+            },
+            fontSize: {
+                "xs": "0.625rem",
             },
             colors: {
                 border: "hsl(var(--border))",

@@ -5,6 +5,7 @@ const DISTANCE = 200;
 
 const options: ISourceOptions = {
     fpsLimit: 120,
+
     interactivity: {
         events: {
             onHover: {
@@ -28,6 +29,7 @@ const options: ISourceOptions = {
             opacity: 0.6,
             width: 2,
         },
+
         move: {
             direction: "none",
             enable: true,
@@ -57,6 +59,18 @@ const options: ISourceOptions = {
             },
         },
     },
+    responsive: [
+        {
+            maxWidth: 800,
+            options: {
+                particles: {
+                    number: {
+                        value: 70,
+                    },
+                }
+            }
+        }
+    ],
     detectRetina: true,
 }
 export {options};

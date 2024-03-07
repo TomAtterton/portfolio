@@ -17,14 +17,14 @@ export default function Home() {
                     focusing on mobile
                     development specializing in React Native
                 </p>
-                <div className="flex flex-row space-x-5 mx-4 md:px-0">
+                <div className="flex flex-row  md:space-x-5 md:px-0">
                     <IconButton icon={'email'} link={"mailto:tpatterton@gmail.com"}/>
                     <IconButton icon={'github'} link={"https://github.com/tomatterton"}/>
                     <IconButton icon={'linkedin'} link={"https://www.linkedin.com/in/tom-atterton-48a84274"}/>
                     <IconButton icon={'twitter'} link={"https://twitter.com/tom_atterton"}/>
                 </div>
             </div>
-            <p className="text-sm md:text-base absolute left-5 bottom-5 opacity-50">@ 2024 Tom Atterton - All rights
+            <p className="text-xs md:text-base absolute left-5 bottom-5 opacity-50">@ 2024 Tom Atterton - All rights
                 reserved. Hosted on
                 Vercel.</p>
             <ParticalBackground/>
