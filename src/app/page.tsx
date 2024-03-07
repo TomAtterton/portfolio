@@ -1,10 +1,13 @@
+"use client"
+
 import IconButton from "@/components/ui/icon-button";
 import {ThemeButton} from "@/components/ui/theme-button";
-import ParticalBackground from "@/components/ui/ParticalBackground";
+import ParticalBackground from "../components/ui/ParticleBackground";
+
 
 export default function Home() {
     return (
-        <main className="flex min-h-screen flex-col justify-center">
+        <main className="flex min-h-screen h-screen flex-col justify-center">
             <div className="flex space-x-5 items-center absolute top-2 right-2 md:top-6 md:right-6">
                 <ThemeButton/>
             </div>
@@ -23,7 +26,7 @@ export default function Home() {
             </div>
             <p className="text-sm md:text-base absolute left-5 bottom-5 opacity-50">@ 2024 Tom Atterton - All rights
                 reserved. Hosted on
-                Github.</p>
+                Vercel.</p>
             <ParticalBackground/>
         </main>
     );

@@ -1,6 +1,6 @@
 "use client"
 
-import {useEffect, useMemo, useState} from "react";
+import {useEffect, useMemo} from "react";
 import Particles, {initParticlesEngine} from "@tsparticles/react";
 import {loadSlim} from "@tsparticles/slim";
 import {options} from "./options";
@@ -8,12 +8,10 @@ import {useTheme} from "next-themes";
 import {ISourceOptions} from "@tsparticles/engine";
 
 
-const ParticalBackground = () => {
-    const [init, setInit] = useState(false);
+const ParticleBackground = () => {
+
     useEffect(() => {
-        initParticlesEngine(async (engine) => loadSlim(engine)).then(() => {
-            setInit(true);
-        });
+        initParticlesEngine((engine) => loadSlim(engine))
     }, []);
     const {theme} = useTheme()
 
@@ -35,11 +33,11 @@ const ParticalBackground = () => {
         }
     }, [isDark])
 
-    return init && <Particles
-        id="tsparticles"
+    return <Particles
+        className="absolute top-0 left-0 w-full h-full z-[-1]"
         options={particleOptions}
     />
 }
 
 
-export default ParticalBackground;
+export default ParticleBackground;
