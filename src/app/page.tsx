@@ -1,7 +1,6 @@
 "use client"
 
 import IconButton from "@/components/ui/icon-button";
-import {ThemeButton} from "@/components/ui/theme-button";
 import ParticalBackground from "../components/ui/ParticleBackground";
 
 
@@ -9,9 +8,7 @@ export default function Home() {
     return (
 
         <main className="flex scale-1 h-[calc(100dvh)] flex-col justify-center items-center">
-            <div className="flex space-x-5 items-center absolute top-2 right-2 md:top-6 md:right-6">
-                <ThemeButton/>
-            </div>
+
             <div className="flex flex-col items-center gap-4 px-4 md:px-12">
                 <p className='text-2xl md:text-4xl'>Tom Atterton</p>
                 <p className="text-sm md:text-base italic text-wrap text-center">Passionate Software Developer

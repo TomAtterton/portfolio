@@ -23,6 +23,7 @@ const config = {
                 mono: ['var(--font-roboto-mono)'],
             },
             fontSize: {
+                "s": "0.725rem",
                 "xs": "0.625rem",
             },
             colors: {

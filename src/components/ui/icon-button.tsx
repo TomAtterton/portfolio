@@ -1,6 +1,6 @@
 import {Button} from "@/components/ui/button";
 import Link from "next/link";
-import {EnvelopeClosedIcon, GitHubLogoIcon, LinkedInLogoIcon, TwitterLogoIcon} from "@radix-ui/react-icons";
+import {EnvelopeClosedIcon, GitHubLogoIcon, HomeIcon, LinkedInLogoIcon, TwitterLogoIcon} from "@radix-ui/react-icons";
 import {cn} from "@/lib/utils";
 
 interface Props {
@@ -13,6 +13,7 @@ interface Props {
 
 
 const Icons = {
+    home: HomeIcon,
     github: GitHubLogoIcon,
     linkedin: LinkedInLogoIcon,
     twitter: TwitterLogoIcon,
