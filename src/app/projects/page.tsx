@@ -54,6 +54,9 @@ const Projects = () =>
                             <Image
                                 className={'w-30 h-30 md:w-40 md:h-40 rounded-3xl'}
                                 src={project.icon}
+                                loading={'lazy'}
+                                placeholder={'blur'}
+                                blurDataURL={project.icon}
                                 alt={`Icon for ${project.title}`}
                                 width={100}
                                 height={100}
@@ -72,9 +75,12 @@ const Projects = () =>
                                     <div className={'overflow-auto overscroll-x-auto flex flex-row gap-5 pt-10 '}>
                                         {screenshots?.map((_, index) =>
                                             <Image
+                                                placeholder={'blur'}
+                                                loading={'lazy'}
                                                 key={index}
-                                                className={'w-36 md:w-60 rounded'}
-                                                src={_} alt={'test'}
+                                                className={'w-36 md:w-60 rounded-3xl'}
+                                                src={_} alt={`Screenshots for ${project.title}}`}
+                                                blurDataURL={_}
                                                 height={800}
                                                 width={400}
                                             />)}
