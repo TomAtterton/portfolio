@@ -32,12 +32,12 @@ const IconButton = ({
     const Icon = Icons[icon];
     return (
         <Button variant={'ghost'} className={cn("p-6", className)} disabled={disabled} asChild>
-            <Link href={link} target="_blank" rel="noreferrer">
+            <a href={link} target="_blank" rel="noreferrer">
                 <Icon
                     height={32}
                     width={32}
                 />
-            </Link>
+            </a>
         </Button>
     );
 }
