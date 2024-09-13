@@ -32,8 +32,11 @@ export default async function middleware(req: NextRequest) {
 
   // Check for Recipe Vault subdomain
   if (hostname === `recipevault.${process.env.NEXT_PUBLIC_ROOT_DOMAIN}`) {
-    const path = url.pathname === '/' ? '' : url.pathname; // handle root path case
-
+    let path = url.pathname === '/' ? '' : url.pathname; // handle root path case
+    // if path contains recipe-vault then delete it
+    if (path.startsWith('recipe-vault')) {
+      path = path.replace('recipe-vault', '');
+    }
     // Rewrite all recipevault subdomain traffic to the path under tomatterton.com/recipe-vault
     return NextResponse.rewrite(
       new URL(`/recipe-vault${path}`, `https://${process.env.NEXT_PUBLIC_ROOT_DOMAIN}`),
