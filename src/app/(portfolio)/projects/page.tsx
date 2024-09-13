@@ -1,6 +1,6 @@
 import React from 'react';
-import ProjectsWorkedOn from '@/app/projects/ProjectsWorkedOn';
-import PersonalProjects from '@/app/projects/PersonalProjects';
+import ProjectsWorkedOn from '@/app/(portfolio)/projects/ProjectsWorkedOn';
+import PersonalProjects from '@/app/(portfolio)/projects/PersonalProjects';
 
 const Projects = () => (
   <main className="flex flex-col pt-20 pb-20 px-10">

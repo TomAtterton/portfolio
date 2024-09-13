@@ -9,10 +9,13 @@ export default function Home() {
       <div className="flex flex-col items-center gap-4 px-4 md:px-12">
         <p className="text-2xl md:text-4xl">Tom Atterton</p>
         <p className="text-sm md:text-base italic text-wrap text-center">
-          Passionate Software Developer currently focusing on mobile development in React Native
+          {
+            'Freelance Software Developer focused on mobile development with React Native, providing efficient and reliable solutions for clients.'
+          }
         </p>
+        <p className="text-xs md:text-base">{'Get in touch with me below '}</p>
         <div className="flex flex-row  md:space-x-5 md:px-0">
-          <IconButton icon={'email'} link={'mailto:tpatterton@gmail.com'} />
+          <IconButton icon={'email'} link={'mailto:hello@tomatterton.com'} />
           <IconButton icon={'github'} link={'https://github.com/tomatterton'} />
           <IconButton
             icon={'linkedin'}

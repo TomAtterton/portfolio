@@ -8,6 +8,20 @@ const nextConfig = {
       },
     ];
   },
+  async redirects() {
+    return [
+      {
+        source: '/recipe-vault',
+        destination: 'https://recipevault.tomatterton.com',
+        permanent: true,
+      },
+      {
+        source: '/recipe-vault/:path*',
+        destination: 'https://recipevault.tomatterton.com/:path*',
+        permanent: true,
+      },
+    ];
+  },
   experimental: {
     typedRoutes: true,
   },

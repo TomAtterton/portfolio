@@ -1,7 +1,8 @@
 import type { Metadata } from 'next';
 import { JetBrains_Mono } from 'next/font/google';
-import './globals.css';
+import '../globals.css';
 import { ThemeProvider } from '@/components/theme-provider';
+import NavBar from '@/components/ui/NavBar/NavBar';
 
 const mono = JetBrains_Mono({ weight: ['300', '400'], subsets: ['latin'] });
 
@@ -20,6 +21,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={mono.className}>
         <ThemeProvider attribute="class" defaultTheme="dark" disableTransitionOnChange>
+          <NavBar />
           {children}
         </ThemeProvider>
       </body>
