@@ -1,0 +1,120 @@
+[
+  {
+    "id": 0,
+    "image": "/recipe_vault.png",
+    "title": "Recipe Vault",
+    "description": "Unleash the power to store, search, and filter recipes seamlessly. Effortlessly plan meals and generate shopping lists with my upcoming app. Perfect for all cooking levels, Recipe Vault promises a delightful experience.",
+    "tags": [
+      "React",
+      "React Native",
+      "Expo",
+      "Expo SQLite",
+      "Supabase",
+      "Reanimated",
+      "React Navigation",
+      "Skia",
+      "Zustand"
+    ],
+    "link": null
+  },
+  {
+    "id": 1,
+    "image": "/basic_fit.webp",
+    "title": "Basic-Fit",
+    "description": "A fitness app to track workouts and manage gym memberships.",
+    "tags": [
+      "React Native",
+      "iOS",
+      "Android",
+      "GraphQL",
+      "Apollo Client",
+      "Skia"
+    ],
+    "link": "https://www.basic-fit.com/"
+  },
+  {
+    "id": 2,
+    "image": "/adidas_confirmed.webp",
+    "title": "Adidas Confirmed",
+    "description": "An app providing exclusive access to limited-edition Adidas products.",
+    "tags": [
+      "iOS",
+      "Objective-C",
+      "ReactiveCocoa",
+      "Socket.IO"
+    ],
+    "link": "https://www.adidas.com/confirmed"
+  },
+  {
+    "id": 3,
+    "image": "/ace_hardware.webp",
+    "title": "Ace Hardware",
+    "description": "An app to find products, check inventory, and purchase from your local Ace Hardware store.",
+    "tags": [
+      "React Native",
+      "iOS",
+      "Android",
+      "Redux",
+      "React-Native-Webview"
+    ],
+    "link": "https://www.acehardware.com/"
+  },
+  {
+    "id": 4,
+    "image": "/slimming_world.webp",
+    "title": "Slimming World",
+    "description": "An app to support weight loss with recipes and meal plans.",
+    "tags": [
+      "React Native",
+      "iOS",
+      "Android",
+      "Redux",
+      "React-Native-Navigation"
+    ],
+    "link": "https://www.slimmingworld.co.uk/"
+  },
+  {
+    "id": 5,
+    "image": "/q_dance.webp",
+    "title": "Q-Dance",
+    "description": "An app for Q-Dance events, music, and community engagement.",
+    "tags": [
+      "React Native",
+      "iOS",
+      "Android",
+      "PubNub",
+      "Socket.IO",
+      "Skia",
+      "Redux"
+    ],
+    "link": "https://www.q-dance.com/"
+  },
+  {
+    "id": 6,
+    "image": "/mclaren.webp",
+    "title": "McLaren Racing",
+    "description": "Official app for McLaren Racing with news, videos, and live updates.",
+    "tags": [
+      "React Native",
+      "iOS",
+      "React-Navigation",
+      "Redux"
+    ],
+    "link": "https://www.mclaren.com/racing/"
+  },
+  {
+    "id": 7,
+    "image": "/puurfect_advent_icon.png",
+    "title": "Advent Calendar",
+    "description": "Introducing my Advent Calendar app – a minimalist countdown to Christmas where each day reveals an image or GIF surprise. Share the festive experience by customizing and exchanging calendars with friends. Stay tuned for potential updates.",
+    "tags": [
+      "React",
+      "React Native",
+      "Expo",
+      "Redux",
+      "React Navigation",
+      "Supabase"
+    ],
+    "link": null
+  }
+]
