@@ -34,13 +34,13 @@ export default async function middleware(req: NextRequest) {
   if (hostname === `recipevault.${process.env.NEXT_PUBLIC_ROOT_DOMAIN}`) {
     let path = url.pathname === '/' ? '' : url.pathname; // handle root path case
 
-    // Only prepend '/recipe-vault' if the path doesn't already start with it
-    if (!path.startsWith('/recipe-vault')) {
-      path = `/recipe-vault${path}`;
+    // if path contains recipe-vault then delete it
+    if (path.includes('/recipe-vault')) {
+      path = path.replace('/recipe-vault', '');
     }
-    // Rewrite all recipevault subdomain traffic to the path under tomatterton.com/recipe-vault
+
     return NextResponse.rewrite(
-      new URL(`/recipe-vault${path}`, `https://${process.env.NEXT_PUBLIC_ROOT_DOMAIN}`),
+      new URL(`https://${process.env.NEXT_PUBLIC_ROOT_DOMAIN}/recipe-vault/${path}`),
     );
   }
 
@@ -49,14 +49,13 @@ export default async function middleware(req: NextRequest) {
     const path = `${url.pathname}${
       url.searchParams.toString().length > 0 ? `?${url.searchParams.toString()}` : ''
     }`;
-
-    // Handle paths like /recipe-vault and further directories
-    if (path.startsWith('/recipe-vault')) {
+    if (path === '/') {
+      // Rewrite only the root path `/` to `/home`
+      return NextResponse.rewrite(new URL(`/home`, req.url));
+    } else {
+      // For all other paths, do not prepend `/home`
       return NextResponse.rewrite(new URL(path, req.url));
     }
-
-    // Default rewrite for the root domain if not /recipe-vault
-    return NextResponse.rewrite(new URL(`/home${path === '/' ? '' : path}`, req.url));
   }
 
   // Special case for Vercel preview deployment URLs
