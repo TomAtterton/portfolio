@@ -5,17 +5,19 @@ export function middleware(request: NextRequest) {
   const url = request.nextUrl.clone();
   const hostname = request.headers.get('host');
 
-  // Check if the request is coming from recipevault.tomatterton.com
   if (hostname === 'recipevault.tomatterton.com') {
-    // Rewrite to the correct path for the Recipe Vault app
     if (url.pathname === '/') {
-      url.pathname = '/recipe-vault';
+      url.pathname = '/recipe-vault'; // Route to recipe vault home
     } else {
       url.pathname = `/recipe-vault${url.pathname}`;
     }
     return NextResponse.rewrite(url);
   }
 
-  // Proceed as usual for all other hostnames
+  if (hostname === 'tomatterton.com' && url.pathname !== '/') {
+    url.pathname = '/';
+    return NextResponse.redirect(url);
+  }
+
   return NextResponse.next();
 }
