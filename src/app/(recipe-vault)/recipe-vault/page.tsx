@@ -57,7 +57,7 @@ const LandingPage = () => {
 
         {/* Privacy Policy Link */}
         <div className="mt-6">
-          <Link href="/recipe-vault/privacy-policy">
+          <Link href="/privacy-policy">
             <span className="text-sm text-muted-foreground underline">Privacy Policy</span>
           </Link>
         </div>
