@@ -1,6 +1,9 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { Route } from 'next';
+
+const privacyPolicyUrl = '/privacy-policy' as Route;
 
 const LandingPage = () => {
   return (
@@ -57,7 +60,7 @@ const LandingPage = () => {
 
         {/* Privacy Policy Link */}
         <div className="mt-6">
-          <Link href="/privacy-policy">
+          <Link href={privacyPolicyUrl}>
             <span className="text-sm text-muted-foreground underline">Privacy Policy</span>
           </Link>
         </div>
