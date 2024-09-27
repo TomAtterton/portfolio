@@ -44,7 +44,7 @@ const LandingPage = () => {
 
         <div className="mt-8">
           <a
-            href="https://apps.apple.com/app/recipe-vault"
+            href="https://apps.apple.com/app/recipe-vault/id6476562251"
             target="_blank"
             rel="noopener noreferrer"
           >
