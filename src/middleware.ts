@@ -48,6 +48,28 @@ export default async function middleware(req: NextRequest) {
       return NextResponse.redirect(recipeVaultUrl);
     }
 
+    if (subdomain === 'purrfectadvent') {
+      if (pathName === '/') {
+        // Redirect to the home of the subdomain
+        const newUrl = new URL(`${protocol}://${hostname}/purrfect-advent`);
+        return NextResponse.rewrite(newUrl);
+      }
+      if (url.pathname === '/privacy-policy') {
+        const internalUrl = new URL(`/purrfect-advent/privacy-policy`, req.url);
+        return NextResponse.rewrite(internalUrl);
+      }
+      // Allow further routing on subdomain
+      return NextResponse.next();
+    }
+
+    if (pathName === '/purrfect-advent') {
+      const newUrl = isLocalhost
+        ? new URL(`${protocol}://purrfectadvent.${hostname}`)
+        : new URL(`${protocol}://purrfectadvent.${process.env.NEXT_PUBLIC_ROOT_DOMAIN}`);
+
+      return NextResponse.redirect(newUrl);
+    }
+
     // Handle root URL on the main domain
     if (pathName === '/') {
       const homeUrl = isLocalhost
