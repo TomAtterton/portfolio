@@ -43,7 +43,7 @@ const LandingPage = () => {
 
         <div className="mt-8">
           <a
-            href="https://apps.apple.com/app/purrfect-holiday-countdown/id6476562251"
+            href="https://apps.apple.com/us/app/purrfect-advent/id6473840052"
             target="_blank"
             rel="noopener noreferrer"
           >
