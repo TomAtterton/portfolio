@@ -6,7 +6,7 @@ export const config = {
 
 export default async function middleware(req: NextRequest) {
   const url = req.nextUrl;
-  let hostname = req.headers.get('host') || 'localhost:3000'; // fallback for localhost
+  const hostname = req.headers.get('host') || 'localhost:3000'; // fallback for localhost
 
   // Detect if we are in localhost environment
   const isLocalhost = hostname.includes('localhost');

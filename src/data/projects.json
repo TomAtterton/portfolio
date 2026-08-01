@@ -1,5 +1,19 @@
 [
   {
+    "id": 8,
+    "image": "/vandebron.png",
+    "title": "Vandebron",
+    "description": "Working on Vandebron's Thuis app, helping customers understand and manage their home energy usage from a polished mobile experience.",
+    "tags": [
+      "React Native",
+      "iOS",
+      "Android",
+      "Energy",
+      "Mobile Product"
+    ],
+    "link": "https://vandebron.nl/energie/thuis-app"
+  },
+  {
     "id": 0,
     "image": "/recipe_vault.png",
     "title": "Recipe Vault",

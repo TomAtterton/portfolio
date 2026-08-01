@@ -1,25 +1,31 @@
-"use client"
+'use client';
 
-import * as React from "react"
-import {MoonIcon, SunIcon} from "@radix-ui/react-icons"
-import {useTheme} from "next-themes"
+import { MoonIcon, SunIcon } from '@radix-ui/react-icons';
+import { useTheme } from 'next-themes';
 
-import {Button} from "@/components/ui/button"
+import { Button } from '@/components/ui/button';
 
 export function ThemeButton() {
-    const {theme = 'dark', setTheme} = useTheme()
+  const { theme = 'dark', setTheme } = useTheme();
 
-    const isDark = theme === "dark"
-    const handleToggle = () => {
-        setTheme(isDark ? "light" : "dark")
-    }
+  const isDark = theme === 'dark';
+  const handleToggle = () => {
+    setTheme(isDark ? 'light' : 'dark');
+  };
 
-    return (
-        <Button onClick={handleToggle} variant="ghost" className={'h-10 w-10'}>
-            {isDark ? <MoonIcon
-                    className="absolute h-[1.2rem] w-[1.2rem]"/> :
-                <SunIcon
-                    className="absolute h-[1.2rem] w-[1.2rem]"/>}
-        </Button>
-    )
+  return (
+    <Button
+      onClick={handleToggle}
+      variant="ghost"
+      size="icon"
+      aria-label={isDark ? 'Switch to light theme' : 'Switch to dark theme'}
+      className="h-10 w-10"
+    >
+      {isDark ? (
+        <MoonIcon aria-hidden="true" className="h-[1.2rem] w-[1.2rem]" />
+      ) : (
+        <SunIcon aria-hidden="true" className="h-[1.2rem] w-[1.2rem]" />
+      )}
+    </Button>
+  );
 }

@@ -4,63 +4,60 @@ import projects from '@/data/projects';
 import { Project } from '@/interfaces';
 
 const Projects = () => (
-  <main className="flex flex-col pt-20 pb-20 px-10">
-    <section aria-labelledby="projects-title" className="py-12">
-      <h2 id="projects-title" className="text-3xl font-bold text-gray-800 dark:text-white">
-        {"A selection of projects I've worked on"}
-      </h2>
-      <p className="mt-4 text-gray-600 dark:text-gray-300">
-        {
-          "Here are some of the projects I've contributed to, showcasing my experience in mobile development using React Native and other technologies."
-        }
-      </p>
-      <div className="mt-8 grid gap-8 grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
+  <main className="min-h-screen px-5 py-24 sm:px-8 lg:px-16">
+    <section aria-labelledby="projects-title" className="mx-auto max-w-7xl">
+      <div className="max-w-3xl">
+        <p className="text-sm font-medium uppercase tracking-[0.18em] text-foreground/60">
+          Selected work
+        </p>
+        <h1 id="projects-title" className="mt-4 text-4xl font-semibold leading-tight sm:text-5xl">
+          Mobile products for consumer brands, utilities, events, and sport.
+        </h1>
+        <p className="mt-5 text-base leading-8 text-foreground/70">
+          A selection of projects I have contributed to across React Native, Expo, native iOS, and
+          supporting product infrastructure.
+        </p>
+      </div>
+
+      <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
         {projects.map((project: Project) => {
           const cardContent = (
-            <div className="flex flex-col h-full">
-              {/* Project Image */}
-              <div className="p-4 flex">
+            <div className="flex h-full flex-col">
+              <div className="flex min-h-24 items-center border-b border-border/70 p-5">
                 <Image
                   src={project.image}
                   alt={`${project.title} logo`}
                   width={64}
                   height={64}
-                  className="object-contain rounded-lg"
+                  className="h-16 w-16 rounded-md object-contain"
                 />
               </div>
-              {/* Project Details */}
-              <div className="px-4 pb-4 flex-grow flex flex-col">
-                <h3 className="text-xl font-semibold text-gray-800 dark:text-white">
-                  {project.title}
-                </h3>
-                <p className="mt-2 text-gray-600 dark:text-gray-300 flex-grow">
+              <div className="flex flex-1 flex-col p-5">
+                <h2 className="text-xl font-semibold">{project.title}</h2>
+                <p className="mt-3 flex-1 text-sm leading-7 text-foreground/70">
                   {project.description}
                 </p>
-                {/* Tags */}
-                <div className="mt-3 flex flex-wrap gap-2">
+                <div className="mt-5 flex flex-wrap gap-2">
                   {project.tags.map((tag, index) => (
                     <span
                       key={index}
-                      className="text-sm px-2 py-1 rounded bg-gray-200 text-gray-800"
+                      className="rounded-md bg-secondary px-2.5 py-1 text-xs text-secondary-foreground"
                     >
                       {tag}
                     </span>
                   ))}
                 </div>
-                {/* Hide 'Visit Website' if no link */}
                 {project.link && (
-                  <div className="mt-4">
-                    <span className="text-blue-600 dark:text-blue-400 hover:underline">
-                      Visit Website
-                    </span>
-                  </div>
+                  <span className="mt-6 text-sm font-medium text-foreground underline-offset-4 group-hover:underline">
+                    Visit website
+                  </span>
                 )}
               </div>
             </div>
           );
 
           const cardClasses =
-            'rounded-lg shadow-md overflow-hidden flex flex-col h-full transform transition duration-300';
+            'flex h-full flex-col overflow-hidden rounded-md border border-border bg-card/80 shadow-sm transition-colors hover:border-foreground/35';
 
           return project.link ? (
             <a
@@ -68,14 +65,15 @@ const Projects = () => (
               href={project.link}
               target="_blank"
               rel="noopener noreferrer"
-              className="block h-full"
+              className="group block h-full focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
+              aria-label={`Visit the ${project.title} website`}
             >
-              <div className={`${cardClasses} hover:scale-105 hover:shadow-lg`}>{cardContent}</div>
+              <article className={cardClasses}>{cardContent}</article>
             </a>
           ) : (
-            <div key={project.id} className={cardClasses}>
+            <article key={project.id} className={cardClasses}>
               {cardContent}
-            </div>
+            </article>
           );
         })}
       </div>

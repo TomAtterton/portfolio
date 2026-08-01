@@ -31,6 +31,7 @@ import { sendEmail } from '@/actions';
 
 export function DialogContactMe() {
   const [isDialogOpen, setIsDialogOpen] = useState(false);
+  const [submitError, setSubmitError] = useState<string | null>(null);
 
   const form = useForm<z.infer<typeof contactFormSchema>>({
     resolver: zodResolver(contactFormSchema),
@@ -45,10 +46,11 @@ export function DialogContactMe() {
 
   async function onSubmit(values: z.infer<typeof contactFormSchema>) {
     try {
+      setSubmitError(null);
       await sendEmail(values);
       setIsDialogOpen(false);
-    } catch (error) {
-      alert('There was an error sending your message. Please try again.');
+    } catch {
+      setSubmitError('There was an error sending your message. Please try again.');
     }
   }
 
@@ -57,16 +59,19 @@ export function DialogContactMe() {
       open={isDialogOpen}
       onOpenChange={(isOpen) => {
         setIsDialogOpen(isOpen);
+        setSubmitError(null);
         form.reset();
       }}
     >
       <DialogTrigger asChild>
-        <label>Contact Me</label>
+        <Button variant="ghost" className="h-10 px-2 text-sm md:text-base">
+          Contact
+        </Button>
       </DialogTrigger>
       <DialogContent className="sm:max-w-md">
         <Form {...form}>
           <DialogHeader>
-            <DialogTitle>Contact Me</DialogTitle>
+            <DialogTitle>Contact Tom</DialogTitle>
           </DialogHeader>
           <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
             <FormField
@@ -109,8 +114,12 @@ export function DialogContactMe() {
               )}
             />
 
+            {submitError && <p className="text-sm text-destructive">{submitError}</p>}
+
             <DialogFooter className="sm:justify-start">
-              <Button type="submit">Submit</Button>
+              <Button type="submit" disabled={form.formState.isSubmitting}>
+                {form.formState.isSubmitting ? 'Sending...' : 'Send message'}
+              </Button>
             </DialogFooter>
           </form>
         </Form>

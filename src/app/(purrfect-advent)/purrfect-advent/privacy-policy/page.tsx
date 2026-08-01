@@ -1,5 +1,3 @@
-import fs from 'fs';
-import path from 'path';
 import { Metadata } from 'next';
 import rehypeStringify from 'rehype-stringify';
 import remarkGfm from 'remark-gfm';
@@ -14,14 +12,6 @@ export const metadata: Metadata = {
 };
 
 const getPrivacyPolicyContent = async (): Promise<string> => {
-  const markdownFilePath = path.join(
-    process.cwd(),
-    'public',
-    'purrfect-advent',
-    'privacy-policy.md',
-  );
-  const fileContents = fs.readFileSync(markdownFilePath, 'utf8');
-
   const processedContent = await unified()
     .use(remarkParse)
     .use(remarkGfm)
