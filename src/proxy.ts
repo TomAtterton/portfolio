@@ -54,8 +54,8 @@ export default async function middleware(req: NextRequest) {
         const newUrl = new URL(`${protocol}://${hostname}/purrfect-advent`);
         return NextResponse.rewrite(newUrl);
       }
-      if (url.pathname === '/privacy-policy') {
-        const internalUrl = new URL(`/purrfect-advent/privacy-policy`, req.url);
+      if (url.pathname === '/privacy-policy' || url.pathname === '/support') {
+        const internalUrl = new URL(`/purrfect-advent${url.pathname}`, req.url);
         return NextResponse.rewrite(internalUrl);
       }
       // Allow further routing on subdomain

@@ -1,75 +1,56 @@
-**Privacy Policy**
+# Purrfect Advent Privacy Policy
 
-This privacy policy applies to the Purrfect Advent app (hereby referred to as "Application") for mobile devices that was created by Tom Atterton (hereby referred to as "Service Provider") as a Freemium service. This service is intended for use "AS IS".
+_Last updated 10 November 2026_
 
-**Information Collection and Use**
+This policy explains what happens to your information when you use Purrfect Advent, an iPhone app made by Tom Atterton ("I", "me"). It matches the policy shown in the app under Settings → Help → Privacy Policy.
 
-The Application collects information when you download and use it. This information may include information such as
+## Overview
 
-*   Your device's Internet Protocol address (e.g. IP address)
-*   The pages of the Application that you visit, the time and date of your visit, the time spent on those pages
-*   The time spent on the Application
-*   The operating system you use on your mobile device
+Purrfect Advent does not use accounts. There is nothing to sign up for, and I do not keep a personal profile about you on any server I run. I do not sell your data, show ads, or track you across other apps and websites.
 
-The Application does not gather precise information about the location of your mobile device.
+## Your calendars and photos
 
-The Application collects your device's location, which helps the Service Provider determine your approximate geographical location and make use of in below ways:
+The calendars you create, the content of each door (text, stickers, GIFs and photos), your avatar and your settings are stored on your iPhone.
 
-*   Geolocation Services: The Service Provider utilizes location data to provide features such as personalized content, relevant recommendations, and location-based services.
-*   Analytics and Improvements: Aggregated and anonymized location data helps the Service Provider to analyze user behavior, identify trends, and improve the overall performance and functionality of the Application.
-*   Third-Party Services: Periodically, the Service Provider may transmit anonymized location data to external services. These services assist them in enhancing the Application and optimizing their offerings.
+Photos you add to a door are picked through the iOS photo picker, which gives the app only the photos you choose. They are copied into the app's storage on your iPhone. The app cannot see the rest of your photo library.
 
-The Service Provider may use the information you provided to contact you from time to time to provide you with important information, required notices and marketing promotions.
+## iCloud sync and sharing
 
-For a better experience, while using the Application, the Service Provider may require you to provide us with certain personally identifiable information, including but not limited to Email. The information that the Service Provider request will be retained by them and used as described in this privacy policy.
+With iCloud Sync on, your calendars, door content and door photos are saved to your own iCloud account using Apple's CloudKit, so they stay up to date across your devices. I cannot read your iCloud data.
 
-**Third Party Access**
+When you share a calendar, the people you invite through Apple's sharing sheet can see that calendar, including its door content and photos. Stop sharing or delete the calendar to remove their access.
 
-Only aggregated, anonymized data is periodically transmitted to external services to aid the Service Provider in improving the Application and their service. The Service Provider may share your information with third parties in the ways that are described in this privacy statement.
+Calendars shared with you are read from their owner's iCloud. Apple's privacy policy covers how iCloud stores this data: <https://www.apple.com/legal/privacy/>
 
-Please note that the Application utilizes third-party services that have their own Privacy Policy about handling data. Below are the links to the Privacy Policy of the third-party service providers used by the Application:
+## Notifications
 
-*   [Google Play Services](https://www.google.com/policies/privacy/)
-*   [Expo](https://expo.io/privacy)
-*   [Sentry](https://sentry.io/privacy/)
-*   [RevenueCat](https://www.revenuecat.com/privacy)
+If you turn on door reminders, the app schedules them on your iPhone. No notification data leaves your device.
 
-The Service Provider may disclose User Provided and Automatically Collected Information:
+## Third-party services
 
-*   as required by law, such as to comply with a subpoena, or similar legal process;
-*   when they believe in good faith that disclosure is necessary to protect their rights, protect your safety or the safety of others, investigate fraud, or respond to a government request;
-*   with their trusted services providers who work on their behalf, do not have an independent use of the information we disclose to them, and have agreed to adhere to the rules set forth in this privacy statement.
+The app uses a few services to work. Each has its own privacy policy.
 
-**Opt-Out Rights**
+- **RevenueCat** handles the Pro subscription. It receives an anonymous app user ID and your App Store purchase details. It does not receive your name or email. <https://www.revenuecat.com/privacy>
+- **Sentry** receives crash reports and error diagnostics (device model, iOS version, app version and what went wrong) so problems can be fixed. <https://sentry.io/privacy/>
+- **GIPHY** receives the search terms you type when you look for a GIF or sticker. <https://support.giphy.com/hc/en-us/articles/360032872931>
+- **Expo** delivers app updates and receives basic device and app version information to do so. <https://expo.dev/privacy>
 
-You can stop all collection of information by the Application easily by uninstalling it. You may use the standard uninstall processes as may be available as part of your mobile device or via the mobile application marketplace or network.
+Payments are processed by Apple. I never see your payment details.
 
-**Data Retention Policy**
+## Children
 
-The Service Provider will retain User Provided data for as long as you use the Application and for a reasonable time thereafter. If you'd like them to delete User Provided Data that you have provided via the Application, please contact them at hello@tomatterton.com and they will respond in a reasonable time.
+The app is not directed at children under 13, and I do not knowingly collect personal information from them.
 
-**Children**
+## Deleting your data
 
-The Service Provider does not use the Application to knowingly solicit data from or market to children under the age of 13.
+Deleting a calendar removes it and its doors from your iPhone and, if it synced, from your iCloud. Deleting the app removes everything it stored on your iPhone. Synced calendars stay in your iCloud until you delete them in the app or manage your iCloud storage in iOS Settings.
 
-The Application does not address anyone under the age of 13. The Service Provider does not knowingly collect personally identifiable information from children under 13 years of age. In the case the Service Provider discover that a child under 13 has provided personal information, the Service Provider will immediately delete this from their servers. If you are a parent or guardian and you are aware that your child has provided us with personal information, please contact the Service Provider (hello@tomatterton.com) so that they will be able to take the necessary actions.
+Cancel the Pro subscription in your Apple Account settings. To ask about any data held by the services above, email me and I will help.
 
-**Security**
+## Changes
 
-The Service Provider is concerned about safeguarding the confidentiality of your information. The Service Provider provides physical, electronic, and procedural safeguards to protect information the Service Provider processes and maintains.
+This policy may change as the app does. The date at the top shows when it last changed.
 
-**Changes**
+## Contact
 
-This Privacy Policy may be updated from time to time for any reason. The Service Provider will notify you of any changes to the Privacy Policy by updating this page with the new Privacy Policy. You are advised to consult this Privacy Policy regularly for any changes, as continued use is deemed approval of all changes.
-
-This privacy policy is effective as of 2024-10-16
-
-**Your Consent**
-
-By using the Application, you are consenting to the processing of your information as set forth in this Privacy Policy now and as amended by us.
-
-**Contact Us**
-
-If you have any questions regarding privacy while using the Application, or have questions about the practices, please contact the Service Provider via email at hello@tomatterton.com.
-
-* * *
+Questions about privacy? Email [hello@tomatterton.com](mailto:hello@tomatterton.com).

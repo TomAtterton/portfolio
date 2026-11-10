@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { Route } from 'next';
 
 const privacyPolicyUrl = '/privacy-policy' as Route;
+const supportUrl = '/support' as Route;
 
 const LandingPage = () => {
   return (
@@ -33,8 +34,8 @@ const LandingPage = () => {
         <h1 className="mt-8 text-5xl font-bold text-foreground">Purr-fect Holiday Countdown</h1>
 
         <p className="mt-6 text-lg text-muted-foreground">
-          Create magical advent calendars to share with friends and family! Customize each day with
-          festive surprises, GIFs, and messages to make this holiday season extra special.
+          Make an advent calendar for someone you love, and share it to their iPhone. Fill 24 doors
+          with notes, photos, GIFs and stickers, and they open one each day of December.
         </p>
 
         <p className="mt-4 text-xl italic text-muted-foreground">
@@ -57,8 +58,10 @@ const LandingPage = () => {
           </a>
         </div>
 
-        {/* Privacy Policy Link */}
-        <div className="mt-6">
+        <div className="mt-6 flex justify-center gap-6">
+          <Link href={supportUrl}>
+            <span className="text-sm text-muted-foreground underline">Support</span>
+          </Link>
           <Link href={privacyPolicyUrl}>
             <span className="text-sm text-muted-foreground underline">Privacy Policy</span>
           </Link>
